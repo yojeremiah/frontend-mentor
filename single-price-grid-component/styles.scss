@@ -16,6 +16,9 @@ body {
   background-color: $grey;
   font: $font-stack;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ul {
@@ -128,3 +131,28 @@ section {
 }
 
 // Media Queries
+@media screen and (min-width: 700px) {
+  section {
+    padding: 2.5rem;
+  }
+  .grid-wrapper {
+    max-width: 650px;
+    display: grid;
+    grid-template-areas: 1fr 1fr;
+  }
+  .join {
+    grid-column: 1/3;
+  }
+
+  .subscription {
+    border-bottom-left-radius: 7px;
+
+    &-text {
+      margin-bottom: 3rem;
+    }
+  }
+
+  .about {
+    border-bottom-left-radius: 0;
+  }
+}
