@@ -12,16 +12,16 @@ ul {
 }
 
 body {
-  background-color: $purple;
-  min-height: 100vh;
   font: $font-stack;
   color: #fff;
+  background-color: $purple;
+  background-image: url('images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .container {
-  background-image: url('images/bg-mobile.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
+  min-height: 100vh;
   padding: 2rem;
   max-width: 700px;
   margin: 0 auto;
@@ -35,6 +35,7 @@ body {
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr;
+  margin: 0 auto;
 }
 
 .mockup-container {
@@ -97,5 +98,53 @@ body {
   &:hover {
     cursor: pointer;
     box-shadow: 2px 2px 12px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-position: center;
+    background-size: cover;
+    background-image: url('images/bg-desktop.svg');
+  }
+
+  .container {
+    max-width: 1400px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .grid-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+  }
+
+  .img-logo {
+    max-width: 200px;
+  }
+
+  .mockup-container {
+    margin: 0 auto;
+  }
+
+  .content-container {
+    text-align: left;
+    padding: 2rem 0;
+
+    .title {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .tagline,
+    .btn-register {
+      font-size: 1.2rem;
+    }
+  }
+
+  .footer {
+    align-self: flex-end;
   }
 }
